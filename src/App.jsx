@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import MenuPage from './Components/MenuPage';
 import OrderHistory from './Components/OrderHistory';
 import './App.css';
-
-import './index.css'
+import './index.css';
 
 const App = () => {
   const [orderHistory, setOrderHistory] = useState([]);
 
   const handleAddToOrder = (menuItem) => {
-  
+    // Logic for adding the menu item to the order can go here
   };
 
   const handleOrderPlaced = (orderDetails) => {
@@ -24,7 +23,10 @@ const App = () => {
         <Link to="/order-history">Order History</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<MenuPage onAddToOrder={handleAddToOrder} onOrderPlaced={handleOrderPlaced} />} />
+        <Route
+          path="/"
+          element={<MenuPage onAddToOrder={handleAddToOrder} onOrderPlaced={handleOrderPlaced} />}
+        />
         <Route path="/order-history" element={<OrderHistory orders={orderHistory} />} />
       </Routes>
     </Router>

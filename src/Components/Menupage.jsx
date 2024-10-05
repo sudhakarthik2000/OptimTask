@@ -166,4 +166,5 @@ MenuPage.propTypes = {
   onOrderPlaced: PropTypes.func.isRequired,
 };
 
+
 export default MenuPage;
