@@ -237,6 +237,7 @@ const menuItems=[
     }
   ]
 
+  
 
 const MenuPage = ({ onAddToOrder, onOrderPlaced }) => {
   
